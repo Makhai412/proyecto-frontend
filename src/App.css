@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    to bottom,
+    #3690CC 0%,
+    #A3C4DB 24%,
+    #BDCDD8 50%,
+    #A3C4DB 75%,
+    #5AA1D0 100%
+  );
+}
+/* Fondo Degradado 
+body {
+  background: linear-gradient(to bottom, #87CEEB, #00BFFF);
+}
+*/
