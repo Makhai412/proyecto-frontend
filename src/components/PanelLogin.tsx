@@ -16,6 +16,7 @@ export default function PanelLogin() {
     setError('');
   };
 
+
   return (
     <div className="flex min-h-screen justify-center items-center">
       <div className="w-full max-w-md bg-white p-9 rounded-lg shadow-md flex flex-col items-center font-sans">
