@@ -7,7 +7,7 @@ export default function Auditory() {
     const [selectedControl, setSelectedControl] = useState<string>("");
   
     return (
-      <div className="flex flex-col min-h-screen">
+      <div className="flex flex-col h-screen">
         {/* Navbar */}
         <Navbar />
   
