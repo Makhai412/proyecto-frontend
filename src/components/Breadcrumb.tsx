@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import arrow from '../assets/arrow-down.png'
+import {ChevronRight} from 'lucide-react'
 
 const breadcrumbItems = [
   { label: 'Perfil', submenu: ['Opción 1', 'Opción 2'] },
@@ -46,18 +46,18 @@ export const Breadcrumb = () => {
           <div
             onClick={() => toggleMenu(index)}
             className={`flex items-center gap-1 cursor-pointer p-1 rounded-md ${
-              openIndex === index ? 'bg-blue-100 text-blue-600 font-bold': 'text-black font-bold hover:bg-blue-50'
+              openIndex === index ? 'bg-blue-100 text-blue-600 font-bold': 'text-white font-bold hover:bg-blue-500'
             }`}>
             <span>{item.label}</span>
-            <img src={arrow} alt="Arrow" className={`h-3 w-3 transform transition-transform duration-200 ${
-              openIndex === index ? 'rotate-360' : 'rotate-270'}`}/>
+            <ChevronRight className={`h-3 w-3 transform transition-transform duration-200 ${
+              openIndex === index ? 'rotate-90' : 'rotate-0'}`}/>
           </div>
           {openIndex === index && (
-            <div className="absolute left-0 mt-1 bg-white border shadow-md rounded-md text-black text-sm w-32 z-50">
+            <div className="absolute left-0 mt-1 bg-white border shadow-md rounded-md text-blue-500 text-sm w-32 z-50">
               {item.submenu.map((option, i) => (
                 <div
                   key={i}
-                  className="p-2 hover:bg-blue-100 cursor-pointer"
+                  className="p-2 hover:bg-blue-100  hover:rounded cursor-pointer"
                 >
                   {option}
                 </div>
