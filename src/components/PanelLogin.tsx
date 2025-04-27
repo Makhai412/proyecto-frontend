@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from '../assets/C&C logo2.png'; // Opcional: tu logo si tienes uno
+import logo from '../assets/C&C logo2.png';
 
 export default function PanelLogin() {
   const [email, setEmail] = useState<string>('');
@@ -12,26 +12,19 @@ export default function PanelLogin() {
       setError('Por favor completa todos los campos.');
       return;
     }
-    // Aquí podrías hacer la llamada a la API de login
     console.log('Email:', email, 'Password:', password);
     setError('');
   };
 
   return (
-    <div className="flex min-h-screen">
-      {/* Lado Izquierdo */}
-      <div>
-        <div className="absolute top-4 left-4 flex items-center gap-2">
-          {logo && (
-            <img src={logo} alt="Logo" className="h-30 w-50 mb-4" />
-          )}
-        </div>
+    <div className="flex min-h-screen justify-center items-center">
+      <div className="w-full max-w-md bg-white p-9 rounded-lg shadow-md flex flex-col items-center font-sans">
+        {/* Logo centrado arriba */}
+        {logo && (
+          <img src={logo} alt="Logo" className="h-35 mb-7" />
+        )}
 
-      </div>
-
-      {/* Lado Derecho - Formulario */}
-      <div className="w-1/2 flex flex-col justify-center items-center bg-white p-8">
-        <form onSubmit={handleSubmit} className="w-full max-w-md space-y-6">
+        <form onSubmit={handleSubmit} className="w-full space-y-6">
           <h2 className="text-2xl font-bold text-center">Login</h2>
 
           <div>
