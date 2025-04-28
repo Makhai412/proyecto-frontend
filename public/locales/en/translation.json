@@ -1,0 +1,763 @@
+{
+    "language": "Language",
+    "nav": {
+       "Perfil": "Profile",
+       "Empresa": "Company",
+       "Lineamiento": "Guidelines"
+     },
+     "breadcrumb": {
+       "options": "Option"
+     },
+     "sidebar": {
+       "Profundizando": "Diving into NIST SP 800-30",
+       "Contexto": "Organization Context",
+       "Liderazgo": "Leadership",
+       "Planificación": "Planning",
+       "Soporte": "Support",
+       "Operación": "Operation",
+       "Evaluación": "Performance Evaluation",
+       "Mejora": "Improvement",
+       "Controles": "Specific Controls",
+       "Crear": "Create Evaluation"
+   },
+       "controlTexts": {
+         "seccionA": {
+           "title": "Section A. Deep Dive into NIST SP 800-30",
+           "description": "Answer these questions before starting the risk profile for the company. Although we ask for your company name, this information will only be used to display it in the final report. Under no circumstances will your company name be disclosed to Microsoft.",
+           "inputs": [
+             {
+               "type": "subtitle",
+               "id": "A.1",
+               "label": "A.1 \"Risk Framing\" Stage"
+             },
+             {
+               "type": "radio",
+               "id": "A.1.1",
+               "label": "A.1.1 Is there a documented risk management strategy that includes roles and responsibilities?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.1.2",
+               "label": "A.1.2 Have risk tolerance levels been formally defined and approved?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.1.3",
+               "label": "A.1.3 Is a risk communication plan for internal and external stakeholders documented?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.1.4",
+               "label": "A.1.4 Have all critical assets been identified and assigned a value or criticality for the business?",
+               "options": [
+                 {"value": "0-20", "label": "0–20 assets"},
+                 {"value": "21-100", "label": "21–100 assets"},
+                 {"value": "more-than-100", "label": "More than 100 assets"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.1.5",
+               "label": "A.1.5 Has a schedule for risk framework reviews been established (e.g., annual, semi-annual)?",
+               "options": [
+                 {"value": "annual", "label": "Annual"},
+                 {"value": "semi-annual", "label": "Semi-annual"},
+                 {"value": "on-demand", "label": "On demand"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "subtitle",
+               "id": "A.2",
+               "label": "A.2 \"Risk Assessment\" Stage"
+             },
+             {
+               "type": "radio",
+               "id": "A.2.1",
+               "label": "A.2.1 Are threat sources categorized (adversarial, accidental, environmental)?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.2.2",
+               "label": "A.2.2 Are scanning tools and penetration tests used to identify vulnerabilities?",
+               "options": [
+                 {"value": "regularly", "label": "Yes, regularly"},
+                 {"value": "occasionally", "label": "Yes, occasionally"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.2.3",
+               "label": "A.2.3 Are defined probability and impact scales (e.g., 1–5) used when assessing each risk?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.2.4",
+               "label": "A.2.4 Are vulnerability results updated in the risk database after each finding?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.2.5",
+               "label": "A.2.5 Are risks prioritized using criticality indices (e.g., risk = probability × impact)?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "subtitle",
+               "id": "A.3",
+               "label": "A.3 \"Risk Response\" Stage"
+             },
+             {
+               "type": "radio",
+               "id": "A.3.1",
+               "label": "A.3.1 Are treatment options evaluated for each risk (mitigate, transfer, accept, avoid)?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.3.2",
+               "label": "A.3.2 Is a cost-benefit analysis performed before implementing a control?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.3.3",
+               "label": "A.3.3 Does each risk treatment plan have a responsible person and execution date?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.3.4",
+               "label": "A.3.4 Are residual risks documented and communicated to senior management?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.3.5",
+               "label": "A.3.5 Is the progress of risk treatments monitored with indicators (e.g., % of controls implemented)?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "subtitle",
+               "id": "A.4",
+               "label": "A.4 \"Risk Monitoring\" Stage"
+             },
+             {
+               "type": "radio",
+               "id": "A.4.1",
+               "label": "A.4.1 Are periodic risk status reports generated (monthly, quarterly, semi-annually)?",
+               "options": [
+                 {"value": "monthly", "label": "Monthly"},
+                 {"value": "quarterly", "label": "Quarterly"},
+                 {"value": "semi-annually", "label": "Semi-annually"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.4.2",
+               "label": "A.4.2 Are there triggers that restart the risk assessment after a significant change?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.4.3",
+               "label": "A.4.3 Do security incidents feed back into the risk assessment process?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.4.4",
+               "label": "A.4.4 Is the effectiveness of risk controls reviewed at least once a year?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "A.4.5",
+               "label": "A.4.5 Is a history of risk level trends maintained over time?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             }
+           ]
+         },
+         "seccionB": {
+           "title": "Section B. Clause 4: Context of the organization",
+           "inputs": [
+             {
+               "type": "radio",
+               "id": "B.1.1",
+               "label": "B.1.1 Has the organization identified and documented internal factors that may affect information security?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "B.1.2",
+               "label": "B.1.2 Have external factors (regulatory, market, technological) that impact security been cataloged and evaluated?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "B.1.3",
+               "label": "B.1.3 Has a list of interested parties (customers, suppliers, regulators) and their security requirements been prepared?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "B.1.4",
+               "label": "B.1.4 Is the scope of the ISMS defined and approved by management (organizational and technological boundaries)?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "conditional",
+               "id": "condicional_B.1.4",
+               "condition": "B.1.4 == 'Yes' || B.1.4 == 'Partially'",
+               "inputs": [
+                 {
+                   "type": "radio",
+                   "id": "B.1.4.1",
+                   "label": "B.1.4.1 Does the scope explicitly include servers, workstations, and cloud assets?",
+                   "options": [
+                     {"value": "yes", "label": "Yes"},
+                     {"value": "no", "label": "No"},
+                     {"value": "unknown", "label": "I don't know"}
+                   ]
+                 },
+                 {
+                   "type": "radio",
+                   "id": "B.1.4.2",
+                   "label": "B.1.4.2 Has the physical/logical location of each included asset been documented?",
+                   "options": [
+                     {"value": "yes", "label": "Yes"},
+                     {"value": "no", "label": "No"},
+                     {"value": "unknown", "label": "I don't know"}
+                   ]
+                 }
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "B.1.5",
+               "label": "B.1.5 Have processes from other areas (e.g., continuity, quality) been identified and integrated within the scope of the ISMS?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             }
+           ]
+         },
+         "seccionC": {
+           "title": "Section C. Clause 5: Leadership",
+           "inputs": [
+             {
+               "type": "radio",
+               "id": "C.1.1",
+               "label": "C.1.1 Does senior management review and sign the information security policy at least once a year?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "C.1.2",
+               "label": "C.1.2 Are roles and responsibilities for the ISMS established and communicated (asset owners, incident managers)?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "C.1.3",
+               "label": "C.1.3 Is the information security policy documented, approved, and disseminated to all staff?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "C.1.4",
+               "label": "C.1.4 Are ISMS objectives aligned with the organization's strategic objectives?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "C.1.5",
+               "label": "C.1.5 Is there a formal mechanism for resolving conflicts between security requirements and other business objectives?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             }
+           ]
+         },
+         "seccionD": {
+           "title": "Section D. Clause 6: Planning",
+           "inputs": [
+             {
+               "type": "radio",
+               "id": "D.1.1",
+               "label": "D.1.1 Is there a documented procedure for identifying information security risks?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "D.1.2",
+               "label": "D.1.2 Are risks assessed qualitatively or quantitatively and assigned levels (high/medium/low)?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "D.1.3",
+               "label": "D.1.3 Has a risk treatment plan been developed with responsible persons and deadlines?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "D.1.4",
+               "label": "D.1.4 Are security objectives documented, measurable, and reviewed at least once a year?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "D.1.5",
+               "label": "D.1.5 Is the impact on the ISMS assessed before implementing significant changes to the organization or technology?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             }
+           ]
+         },
+         "seccionE": {
+           "title": "Section E. Clause 7: Support",
+           "inputs": [
+             {
+               "type": "radio",
+               "id": "E.1.1",
+               "label": "E.1.1 Has the organization allocated sufficient resources (human, technological, and financial) for the ISMS?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "E.1.2",
+               "label": "E.1.2 Is a record of competencies and training in information security maintained for all relevant staff?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "E.1.3",
+               "label": "E.1.3 Are security awareness campaigns conducted at least semi-annually and is their effectiveness measured?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "E.1.4",
+               "label": "E.1.4 Is there a procedure for internally communicating incidents, changes, and audit results?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "E.1.5",
+               "label": "E.1.5 Are ISMS documents and records controlled (versions, approvals, access)?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             }
+           ]
+         },
+         "seccionF": {
+           "title": "Section F. Clause 8: Operation",
+           "inputs": [
+             {
+               "type": "radio",
+               "id": "F.1.1",
+               "label": "F.1.1 Are critical processes (e.g., access management, backup, patch deployment) formally documented and controlled?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "conditional",
+               "condition": "F.1.1 == 'Yes' || F.1.1 == 'Partially'",
+               "inputs": [
+                 {
+                   "type": "radio",
+                   "id": "F.1.1.1",
+                   "label": "F.1.1.1 How frequently are operational procedures reviewed?",
+                   "options": [
+                     {"value": "monthly", "label": "Monthly"},
+                     {"value": "quarterly", "label": "Quarterly"},
+                     {"value": "annually", "label": "Annually"},
+                     {"value": "unknown", "label": "I don't know"}
+                   ]
+                 },
+                 {
+                   "type": "radio",
+                   "id": "F.1.1.2",
+                   "label": "F.1.1.2 Who is responsible for approving changes to these processes?",
+                   "options": [
+                     {"value": "management", "label": "Management"},
+                     {"value": "ciso", "label": "CISO / Security Officer"},
+                     {"value": "it-manager", "label": "IT Manager"},
+                     {"value": "unknown", "label": "I don't know"}
+                   ]
+                 }
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "F.1.2",
+               "label": "F.1.2 Is the Statement of Applicability (SoA) approved and does it reflect the applied controls from Annex A?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "F.1.3",
+               "label": "F.1.3 Has risk treatment been implemented and evidenced according to the established plan?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "F.1.4",
+               "label": "F.1.4 Is there a security continuity plan tested in the last 12 months?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "F.1.5",
+               "label": "F.1.5 If cloud services are used, have their security controls been evaluated and documented?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "partially", "label": "Partially"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             }
+           ]
+         },
+         "seccionG": {
+           "title": "Section G. Clause 9: Performance evaluation",
+           "inputs": [
+             {
+               "type": "radio",
+               "id": "G.1.1",
+               "label": "G.1.1 Are ISMS performance indicators monitored (incidents, response time, vulnerabilities) with periodic reports?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "G.1.2",
+               "label": "G.1.2 Is an internal audit program executed with documented scope and frequency?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "G.1.3",
+               "label": "G.1.3 Are audit findings documented and corrective actions assigned with follow-up?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "G.1.4",
+               "label": "G.1.4 Does management formally review (signed minutes) audit results, risks, and ISMS performance?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "G.1.5",
+               "label": "G.1.5 Are decisions and improvements derived from management review communicated internally?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             }
+           ]
+         },
+         "seccionH": {
+           "title": "Section H. Clause 10: Improvement",
+           "inputs": [
+             {
+               "type": "radio",
+               "id": "H.1.1",
+               "label": "H.1.1 Are all nonconformities recorded and documented corrective actions managed?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "H.1.2",
+               "label": "H.1.2 Is the root cause of each nonconformity investigated before defining actions?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "H.1.3",
+               "label": "H.1.3 Are lessons learned and the ISMS reviewed and updated after each corrective action?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "H.1.4",
+               "label": "H.1.4 Is there a repository of lessons learned accessible to the entire security team?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "H.1.5",
+               "label": "H.1.5 Is the effectiveness of actions taken evaluated to verify that they resolve the nonconformity?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             }
+           ]
+         },
+         "seccionI": {
+           "title": "Section I. Annex A: Specific controls",
+           "inputs": [
+             {
+               "type": "radio",
+               "id": "I.A.1",
+               "label": "I.A.1 Has the security policy been approved, communicated, and periodically reviewed?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "I.A.2",
+               "label": "I.A.2 Are background checks verified and security training provided before incorporating new personnel?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "I.A.3",
+               "label": "I.A.3 Are administrator accounts managed with periodic reviews and recertifications?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "I.A.4",
+               "label": "I.A.4 Are vulnerability scans and malware analysis conducted according to a formal program?",
+               "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+             },
+             {
+               "type": "radio",
+               "id": "I.A.5",
+            "label": "I.A.5 Does the security continuity plan (Annex A.17) include recovery tests and defined roles?",
+            "options": [
+                 {"value": "yes", "label": "Yes"},
+                 {"value": "no", "label": "No"},
+                 {"value": "unknown", "label": "I don't know"}
+               ]
+          }
+        ]
+      }
+    }
+  }

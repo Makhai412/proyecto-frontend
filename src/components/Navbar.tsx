@@ -1,5 +1,5 @@
 import logo from '../assets/C&C logo2.png';
-import { Breadcrumb } from "./Breadcrumb";
+import Breadcrumb from "./Breadcrumb";
 
 export const Navbar = () => {
   return (

@@ -1,43 +1,61 @@
-import { useState, useEffect } from 'react'
-import {ChevronRight} from 'lucide-react'
+import { useState, useEffect } from 'react';
+import { ChevronRight } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from './Languageswitcher';
 
-const breadcrumbItems = [
-  { label: 'Perfil', submenu: ['Opción 1', 'Opción 2'] },
-  { label: 'Empresa', submenu: ['Opción 1', 'Opción 2'] },
-  { label: 'Lineamiento', submenu: ['Opción 1', 'Opción 2'] }
-]
-
-export const Breadcrumb = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+const Breadcrumb = () => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { t } = useTranslation();
+  
+  // Definir los elementos usando las traducciones
+  const breadcrumbItems = [
+    { 
+      label: t('nav.Perfil'), 
+      submenu: [
+        `${t('breadcrumb.options')} 1`, 
+        `${t('breadcrumb.options')} 2`
+      ] 
+    },
+    { 
+      label: t('nav.Empresa'), 
+      submenu: [
+        `${t('breadcrumb.options')} 1`, 
+        `${t('breadcrumb.options')} 2`
+      ] 
+    },
+    { 
+      label: t('nav.Lineamiento'), 
+      submenu: [
+        `${t('breadcrumb.options')} 1`, 
+        `${t('breadcrumb.options')} 2`
+      ] 
+    }
+  ];
 
   const toggleMenu = (index: number) => {
     if (openIndex === index) {
-      setOpenIndex(null)
+      setOpenIndex(null);
     } else {
-      setOpenIndex(index)
+      setOpenIndex(index);
     }
-  }
+  };
 
   // Función para cerrar el menú si se hace clic fuera
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      // Verificar si el clic ocurrió fuera del menú desplegable
-      const target = event.target as HTMLElement
-      const isClickInside = document.querySelector('.relative')?.contains(target)
+      const target = event.target as HTMLElement;
+      const isClickInside = document.querySelector('.relative')?.contains(target);
 
       if (!isClickInside) {
-        setOpenIndex(null)
+        setOpenIndex(null);
       }
-    }
+    };
 
-    // Agregar el event listener al montar el componente
-    document.addEventListener('mousedown', handleClickOutside)
-
-    // Limpiar el event listener al desmontar el componente
+    document.addEventListener('mousedown', handleClickOutside);
     return () => {
-      document.removeEventListener('mousedown', handleClickOutside)
-    }
-  }, [])
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   return (
     <nav className="flex gap-2 items-center text-sm font-semibold relative z-10">
@@ -57,7 +75,7 @@ export const Breadcrumb = () => {
               {item.submenu.map((option, i) => (
                 <div
                   key={i}
-                  className="p-2 hover:bg-blue-100  hover:rounded cursor-pointer"
+                  className="p-2 hover:bg-blue-100 hover:rounded cursor-pointer"
                 >
                   {option}
                 </div>
@@ -66,8 +84,12 @@ export const Breadcrumb = () => {
           )}
         </div>
       ))}
+      <div className="ml-auto">
+        <LanguageSwitcher />
+      </div>
+            
     </nav>
-  )
-}
+  );
+};
 
-export default Breadcrumb
+export default Breadcrumb;

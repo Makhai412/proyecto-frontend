@@ -1,5 +1,7 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import { controlTexts } from "../data/controlTexts";
+
+type SectionId = keyof typeof controlTexts;
 
 type InputType = "radio" | "text" | "subtitle" | "conditional";
 
@@ -9,14 +11,9 @@ type BaseInput = {
   label: string;
 };
 
-type RadioOption = {
-  value: string;
-  label: string;
-};
-
 type RadioInput = BaseInput & {
   type: "radio";
-  options: RadioOption[];
+  options: string[];
 };
 
 type SubtitleInput = BaseInput & {
@@ -31,24 +28,21 @@ type ConditionalInput = BaseInput & {
 
 type ControlInput = RadioInput | SubtitleInput | ConditionalInput;
 
+type Control = {
+  title: string;
+  description: string;
+  inputs: ControlInput[];
+};
+
 type ControlrendererProps = {
-  controlId: string;
+  controlId: SectionId;
 };
 
 export default function Controlrenderer({ controlId }: ControlrendererProps) {
-  const { t } = useTranslation();
+  const defaultControlId: SectionId = "seccionA";
+  const rawControl = controlTexts[controlId] || controlTexts[defaultControlId];
+  const control = rawControl as Control;
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  
-  // Usar un ID por defecto si no se proporciona
-  const useControlId = controlId || "seccionA";
-  
-  // Obtener los datos desde las traducciones
-  const title = t(`controlTexts.${useControlId}.title`);
-  const description = t(`controlTexts.${useControlId}.description`, "");
-  
-  // Obtener los inputs traducidos 
-  const inputsPath = `controlTexts.${useControlId}.inputs`;
-  const inputs = t(inputsPath, { returnObjects: true }) as ControlInput[];
 
   const handleChange = (id: string, value: string) => {
     setAnswers(prev => ({ ...prev, [id]: value }));
@@ -64,8 +58,6 @@ export default function Controlrenderer({ controlId }: ControlrendererProps) {
   };
 
   const renderInputs = (inputs: ControlInput[], prefix = "") => {
-    if (!Array.isArray(inputs)) return null;
-    
     return inputs.map((input, i) => {
       const fullId = prefix ? `${prefix}.${input.id}` : input.id;
   
@@ -87,11 +79,11 @@ export default function Controlrenderer({ controlId }: ControlrendererProps) {
                     <input
                       type="radio"
                       name={fullId}
-                      value={opt.value}
-                      onChange={() => handleChange(fullId, opt.value)}
-                      checked={answers[fullId] === opt.value}
+                      value={opt}
+                      onChange={() => handleChange(fullId, opt)}
+                      checked={answers[fullId] === opt}
                     />
-                    {opt.label}
+                    {opt}
                   </label>
                 </div>
               ))}
@@ -116,9 +108,11 @@ export default function Controlrenderer({ controlId }: ControlrendererProps) {
 
   return (
     <div className="flex flex-col overflow-y-auto p-6 bg-white rounded-lg shadow-md text-black text-left m-4 border border-opacity-30 border-gray-300">
-      <h2 className="text-xl font-bold mb-2">{title}</h2>
-      {description && <p className="text-sm mb-4 text-gray-600">{description}</p>}
-      {inputs && renderInputs(inputs)}
+      <h2 className="text-xl font-bold mb-2">{control.title}</h2>
+      <p className="text-sm mb-4 text-gray-600">{control.description}</p>
+      {renderInputs(control.inputs)}
     </div>
   );
 }
+
+export { Controlrenderer };
