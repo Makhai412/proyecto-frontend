@@ -58,7 +58,7 @@ export default function Controlrenderer({ controlId }: ControlrendererProps) {
   };
 
   const renderInputs = (inputs: ControlInput[], prefix = "") => {
-    return inputs.map((input, i) => {
+    return inputs.map((input) => {
       const fullId = prefix ? `${prefix}.${input.id}` : input.id;
   
       switch (input.type) {

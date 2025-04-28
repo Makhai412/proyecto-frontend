@@ -11,7 +11,7 @@ const savedLanguage = localStorage.getItem('language') || 'es';
 i18n.init({
     fallbackLng: 'es',
     // ...
-    missingKeyHandler: (lng, ns, key) => {
+    missingKeyHandler: (lng, key) => {
       console.warn(`Missing translation key: ${key} for language: ${lng}`);
     }
   });
