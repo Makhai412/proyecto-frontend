@@ -1,13 +1,14 @@
 import './App.css'
+//import {Login} from './pages/Login'
+import { Register } from './pages/Register'
 //import { Auditory } from './pages/Auditory'
-import {Login} from './pages/Login'
 
 function App() {
 
 
   return (
     <>
-      <Login />
+      <Register />
     </>
   )
 }
