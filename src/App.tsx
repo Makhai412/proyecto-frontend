@@ -5,7 +5,7 @@ function App() {
   return (
     <div className="app">
       <main>
-        <AppRoutes />  {/* Deja que el router decida qué mostrar */}
+        <AppRoutes />  
       </main>
     </div>
   )

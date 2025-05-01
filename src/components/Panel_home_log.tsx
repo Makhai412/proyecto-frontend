@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Content = () => {
   return (
     <div className="flex justify-center items-start min-h-screen pt-24 font-sans">
@@ -30,9 +32,9 @@ export const Content = () => {
 
         {/* Botones de acción rápida */}
         <div className="flex gap-4 mb-6">
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+          <Link to="/auditory" className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
             Nueva Auditoría
-          </button>
+          </Link>
           <button className="bg-gray-200 text-gray-800 px-4 py-2 rounded hover:bg-gray-300">
             Ver Auditorías
           </button>
