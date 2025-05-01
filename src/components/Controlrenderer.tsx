@@ -1,5 +1,15 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
+import controlTexts from "../../public/locales/es/translation.json"
+
+
+
+type ControlTextSection = {
+  title: string;
+  description: string;
+  inputs: ControlInput[];
+};
+const controlTextsTyped = (controlTexts as any).controlTexts  as Record<string, ControlTextSection>;
+
 
 type InputType = "radio" | "text" | "subtitle" | "conditional";
 
@@ -36,19 +46,17 @@ type ControlrendererProps = {
 };
 
 export default function Controlrenderer({ controlId }: ControlrendererProps) {
-  const { t } = useTranslation();
+  
+
   const [answers, setAnswers] = useState<Record<string, string>>({});
   
   // Usar un ID por defecto si no se proporciona
   const useControlId = controlId || "seccionA";
   
   // Obtener los datos desde las traducciones
-  const title = t(`controlTexts.${useControlId}.title`);
-  const description = t(`controlTexts.${useControlId}.description`, "");
-  
-  // Obtener los inputs traducidos 
-  const inputsPath = `controlTexts.${useControlId}.inputs`;
-  const inputs = t(inputsPath, { returnObjects: true }) as ControlInput[];
+  const title = controlTextsTyped[useControlId]?.title;
+const description = controlTextsTyped[useControlId]?.description;
+const inputs = controlTextsTyped[useControlId]?.inputs;
 
   const handleChange = (id: string, value: string) => {
     setAnswers(prev => ({ ...prev, [id]: value }));

@@ -1,14 +1,11 @@
 import './App.css'
-import { Auditory } from './pages/Auditory'
-import { useTranslation } from 'react-i18next';
+import AppRoutes from './routes/AppRoutes'
 
 function App() {
-  const { t } = useTranslation();
-  
   return (
     <div className="app">
       <main>
-        <Auditory />
+        <AppRoutes />  {/* Deja que el router decida qué mostrar */}
       </main>
     </div>
   )

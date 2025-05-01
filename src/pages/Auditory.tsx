@@ -2,14 +2,13 @@ import { useState } from 'react';
 import Navbar from '../components/Navbar';
 import Sidebar from '../components/Sidebar';
 import Controlrenderer from '../components/Controlrenderer';
-import { useTranslation } from 'react-i18next';
+
 
 
 export default function Auditory() {
-  const { t } = useTranslation();
-    const [selectedControl, setSelectedControl] = useState<string>("");
+  const [selectedControl, setSelectedControl] = useState<string>("");
   
-    const seccionATitle = t('controlTexts.seccionA.title');
+    const seccionATitle = ('controlTexts.seccionA.title');
     return (
       <div className="flex flex-col h-screen">
         {/* Navbar */}

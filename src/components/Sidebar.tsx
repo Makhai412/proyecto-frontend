@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { ChevronRight } from "lucide-react";
-import { useTranslation } from 'react-i18next';
+import translations from '../../public/locales/es/translation.json';
 
 type SidebarProps = {
   onSelect: (id: string) => void;
@@ -8,19 +8,19 @@ type SidebarProps = {
 
 export default function Sidebar({ onSelect }: SidebarProps) {
   const [activeItem, setActiveItem] = useState<string | null>(null);
-  const { t } = useTranslation();
+  const { sidebar } = translations;
 
-  // Sección del Sidebar con las claves para la traducción
+  // Definimos los elementos usando las traducciones del JSON
   const sidebarItems = [
-    { id: "seccionA", label: t('sidebar.Profundizando') },
-    { id: "seccionB", label: t('sidebar.Contexto') },
-    { id: "seccionC", label: t('sidebar.Liderazgo') },
-    { id: "seccionD", label: t('sidebar.Planificación') },
-    { id: "seccionE", label: t('sidebar.Soporte') },
-    { id: "seccionF", label: t('sidebar.Operación') },
-    { id: "seccionG", label: t('sidebar.Evaluación') },
-    { id: "seccionH", label: t('sidebar.Mejora') },
-    { id: "seccionI", label: t('sidebar.Controles') }
+    { id: "seccionA", label: sidebar.Profundizando },
+    { id: "seccionB", label: sidebar.Contexto },
+    { id: "seccionC", label: sidebar.Liderazgo },
+    { id: "seccionD", label: sidebar.Planificación },
+    { id: "seccionE", label: sidebar.Soporte },
+    { id: "seccionF", label: sidebar.Operación },
+    { id: "seccionG", label: sidebar.Evaluación },
+    { id: "seccionH", label: sidebar.Mejora },
+    { id: "seccionI", label: sidebar.Controles }
   ];
 
   return (
@@ -53,7 +53,7 @@ export default function Sidebar({ onSelect }: SidebarProps) {
       ))}
       {/* Botón para crear nueva evaluación */}
       <button className="mt-4 bg-blue-400 text-black py-1 px-2 rounded shadow w-full">
-        {t('sidebar.Crear')}
+        {sidebar.Crear}
       </button>
     </div>
   );

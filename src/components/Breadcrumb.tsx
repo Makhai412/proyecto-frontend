@@ -1,33 +1,34 @@
 import { useState, useEffect } from 'react';
 import { ChevronRight } from 'lucide-react';
-import { useTranslation } from 'react-i18next';
-import LanguageSwitcher from './Languageswitcher';
+import translations from '../../public/locales/es/translation.json';
 
 const Breadcrumb = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const { t } = useTranslation();
   
-  // Definir los elementos usando las traducciones
+  // Obtener traducciones del archivo JSON
+  const { nav, breadcrumb } = translations;
+  
+  // Crear elementos del breadcrumb usando las traducciones
   const breadcrumbItems = [
     { 
-      label: t('nav.Perfil'), 
+      label: nav.Perfil, 
       submenu: [
-        `${t('breadcrumb.options')} 1`, 
-        `${t('breadcrumb.options')} 2`
+        `${breadcrumb.options} 1`, 
+        `${breadcrumb.options} 2`
       ] 
     },
     { 
-      label: t('nav.Empresa'), 
+      label: nav.Empresa, 
       submenu: [
-        `${t('breadcrumb.options')} 1`, 
-        `${t('breadcrumb.options')} 2`
+        `${breadcrumb.options} 1`, 
+        `${breadcrumb.options} 2`
       ] 
     },
     { 
-      label: t('nav.Lineamiento'), 
+      label: nav.Lineamiento, 
       submenu: [
-        `${t('breadcrumb.options')} 1`, 
-        `${t('breadcrumb.options')} 2`
+        `${breadcrumb.options} 1`, 
+        `${breadcrumb.options} 2`
       ] 
     }
   ];
@@ -84,10 +85,6 @@ const Breadcrumb = () => {
           )}
         </div>
       ))}
-      <div className="ml-auto">
-        <LanguageSwitcher />
-      </div>
-            
     </nav>
   );
 };
