@@ -1,5 +1,7 @@
 import { useState } from "react";
 import logo from '../assets/C&C logo2.png';
+import { Link } from 'react-router-dom';
+
 
 export default function PanelLogin() {
   const [email, setEmail] = useState<string>('');
@@ -67,9 +69,9 @@ export default function PanelLogin() {
 
           <p className="text-center text-sm text-gray-600">
             ¿No tienes cuenta?{' '}
-            <a href="#" className="text-blue-500 hover:underline">
+            <Link to="/auditory" className="text-blue-500 hover:underline">
               Regístrate
-            </a>
+            </Link>
           </p>
         </form>
       </div>

@@ -1,16 +1,13 @@
 import './App.css'
-//import {Login} from './pages/Login'
-//import { Register } from './pages/Register'
-//import { Auditory } from './pages/Auditory'
-import { Home } from './pages/Home'
+import AppRoutes from './routes/AppRoutes'
 
 function App() {
-
-
   return (
-    <>
-      <Home />
-    </>
+    <div className="app">
+      <main>
+        <AppRoutes />  {/* Deja que el router decida qué mostrar */}
+      </main>
+    </div>
   )
 }
 
