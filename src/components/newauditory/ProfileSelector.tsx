@@ -32,7 +32,7 @@ const ProfileSelector = ({ onSelect, error }: ProfileSelectorProps) => {
 
   return (
     <div className="bg-white border border-gray-200 font-sans rounded-lg p-4 shadow-sm">
-      <h3 className="text-lg font-medium text-gray-800 mb-4">Perfil del Auditor</h3>
+      <h3 className="text-lg font-semibold text-blue-800 mb-4">Perfil del Auditor</h3>
       
       <div className="space-y-3">
         {availableProfiles.map((profile) => (
