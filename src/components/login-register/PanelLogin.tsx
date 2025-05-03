@@ -1,5 +1,5 @@
 import { useState } from "react";
-import logo from '../assets/C&C logo2.png';
+import logo from '../../assets/C&C logo2.png';
 import { Link } from 'react-router-dom';
 
 
@@ -69,7 +69,7 @@ export default function PanelLogin() {
 
           <p className="text-center text-sm text-gray-600">
             ¿No tienes cuenta?{' '}
-            <Link to="/auditory" className="text-blue-500 hover:underline">
+            <Link to="/api/regist erUser" className="text-blue-500 hover:underline">
               Regístrate
             </Link>
           </p>

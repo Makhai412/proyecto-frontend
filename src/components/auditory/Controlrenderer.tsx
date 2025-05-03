@@ -1,5 +1,5 @@
 import { useState } from "react";
-import controlTexts from "../../public/locales/es/translation.json"
+import controlTexts from "../../../public/locales/es/translation.json"
 
 
 
@@ -123,7 +123,7 @@ const inputs = controlTextsTyped[useControlId]?.inputs;
   };
 
   return (
-    <div className="flex flex-col overflow-y-auto p-6 bg-white rounded-lg shadow-md text-black text-left m-4 border border-opacity-30 border-gray-300">
+    <div className="flex flex-col overflow-y-auto p-6 bg-white font-sans rounded-lg shadow-md text-black text-left m-4 border border-opacity-30 border-gray-300">
       <h2 className="text-xl font-bold mb-2">{title}</h2>
       {description && <p className="text-sm mb-4 text-gray-600">{description}</p>}
       {inputs && renderInputs(inputs)}

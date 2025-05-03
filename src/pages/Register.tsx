@@ -1,4 +1,4 @@
-import Profile from "../components/BussinesProfile";
+import Profile from "../components/login-register/BussinesProfile";
 
 export default function Register() {
     return <Profile />;

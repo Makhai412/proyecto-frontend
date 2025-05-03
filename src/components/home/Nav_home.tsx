@@ -1,4 +1,4 @@
-import logo from "../assets/C&C logo2.png";
+import logo from "../../assets/C&C logo2.png";
 import { Link } from "react-router-dom";
 
 export const Items = () => {
@@ -13,9 +13,9 @@ export const Items = () => {
           <Link to= "/api/loginUser" className="px-3 py-3 text-xs bg-blue-600 text-white rounded hover:bg-blue-700 transition">
             Iniciar Sesión
           </Link>
-          <button className="px-3 py-3 text-xs bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition">
+          <Link to= "/api/registerUser"className="px-3 py-3 text-xs bg-gray-200 text-gray-800 rounded hover:bg-gray-300 transition">
             Registrarse
-          </button>
+          </Link>
         </div>
       </div>
     </nav>
