@@ -10,7 +10,7 @@ const NewAuditory = () => {
   return (
     <div className="flex flex-col min-h-screen">
                
-      <div className="flex-1 p-6 overflow-y-auto bg-gray-50">
+      <div className="flex-1 p-6 overflow-y-auto font-sans bg-gray-50">
         <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-md p-8">
           <h1 className="text-2xl font-bold text-blue-700 mb-6">Crear Nueva Evaluación</h1>
           <AuditForm onSubmit={handleAuditCreation} />

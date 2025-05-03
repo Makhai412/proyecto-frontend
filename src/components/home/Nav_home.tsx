@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Items = () => {
 
   return (
-    <nav className=" h-20 items-center justify-between flex gap-2 text-sm font-semibold relative z-10">
+    <nav className=" h-20 items-center justify-between flex gap-2 text-sm font-semibold font-sans relative z-10">
       <div className="flex items-center gap-2">
         <img src={logo} alt="Logo" className="h-20 w-auto" />
       </div>

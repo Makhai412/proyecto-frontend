@@ -147,7 +147,7 @@ const AuditForm = ({ onSubmit }: AuditFormProps) => {
 
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-8">
+    <form onSubmit={handleSubmit} className="space-y-8 font-sans">
       {/* Sección de datos básicos */}
       <div className="p-6 bg-blue-50 rounded-lg">
         <h2 className="text-xl font-semibold text-blue-800 mb-4">Información Básica</h2>

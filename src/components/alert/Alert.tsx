@@ -44,7 +44,7 @@ const Alert = ({ type, message, onClose, autoClose = true, duration = 5000 }: Al
   if (!isVisible) return null;
 
   return (
-    <div className={`flex items-center justify-between p-4 mb-4 border-l-4 rounded ${styles[type]}`} role="alert">
+    <div className={`flex items-center justify-between p-4 font-sans mb-4 border-l-4 rounded ${styles[type]}`} role="alert">
       <div className="flex items-center">
         <span className={`mr-2 ${iconColor[type]}`}>
           {type === 'success' && <CheckCircle size={20} />}

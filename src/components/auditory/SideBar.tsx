@@ -72,7 +72,7 @@ const SideBar = ({ isOpen, onClose, onSelect }: SidebarProps) => {
 
   return (
     <div 
-      className={`sidebar fixed top-0 left-0 h-full bg-white text-gray-800 shadow-xl z-50 transition-all duration-300 ease-in-out ${
+      className={`sidebar fixed top-0 left-0 h-full font-sans bg-white text-gray-800 shadow-xl z-50 transition-all duration-300 ease-in-out ${
         isOpen ? 'w-64' : 'w-0 opacity-0'
       }`}
       style={{ top: '85px', paddingTop: '0.5rem' }} // Ajuste para el navbar
@@ -81,7 +81,7 @@ const SideBar = ({ isOpen, onClose, onSelect }: SidebarProps) => {
         <div className="flex flex-col h-full relative">
           {/* Contenedor del header con el botón X mejorado */}
           <div className="flex items-center justify-between px-4 py-2 border-b">
-            <h2 className="font-semibold text-gray-700">Menú de navegación</h2>
+            <h2 className="font-semibold text-gray-800">Menú de navegación</h2>
             <button
               className="p-1 rounded-md hover:bg-gray-200 focus:outline-none"
               onClick={onClose}
