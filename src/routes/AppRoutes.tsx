@@ -3,7 +3,7 @@ import Auditory from '../pages/Auditory';
 import Login from '../pages/Login';
 import Home from '../pages/Home';
 import Register from '../pages/Register';
-import NewAuditory from '../components/auditory/NewAuditory';
+import NewAuditory from '../components/newauditory/NewAuditory';
 
 const AppRoutes = () => {
     let routes = useRoutes([

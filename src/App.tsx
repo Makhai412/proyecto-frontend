@@ -1,14 +1,17 @@
-import './App.css'
-import AppRoutes from './routes/AppRoutes'
+import './App.css';
+import AppRoutes from './routes/AppRoutes';
+import { AlertProvider } from '../src/components/alert/AlertContext';
 
 function App() {
   return (
     <div className="app">
-      <main>
-        <AppRoutes />  
-      </main>
+      <AlertProvider>
+        <main>
+          <AppRoutes />  
+        </main>
+      </AlertProvider>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

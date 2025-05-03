@@ -105,7 +105,7 @@ export default function ProfileBusiness() {
         </form>
         <p className="text-center text-sm text-gray-600">
               ¿Tienes cuenta?{' '}
-              <Link to="/api/registerUser" className="text-blue-500 hover:underline">
+              <Link to="/api/loginuser" className="text-blue-500 hover:underline">
                 Iniciar Sesion
               </Link>
         </p>
