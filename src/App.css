@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 body {
   margin: 0;
   padding: 0;
@@ -10,15 +9,47 @@ body {
 body {
   background: linear-gradient(
     to bottom,
-    #3690CC 0%,
-    #A3C4DB 24%,
-    #BDCDD8 50%,
-    #A3C4DB 75%,
-    #5AA1D0 100%
+    #3B9EFF 0%,     /* Azul brillante al inicio */
+    #80D4FF 25%,    /* Celeste claro */
+    #D6F3FF 50%,    /* Azul pastel muy claro, casi blanco */
+    #80D4FF 75%,    /* Celeste claro (para simetría) */
+    #3399FF 100%    /* Azul vivo para cerrar */
   );
 }
-/* Fondo Degradado 
-body {
-  background: linear-gradient(to bottom, #87CEEB, #00BFFF);
+
+/* Variables para el sidebar */
+:root {
+  --sidebar-width: 0px;
 }
-*/
+
+/* Transición suave para el contenido principal */
+.content-container {
+  transition: margin-left 0.3s ease-in-out;
+}
+
+body.sidebar-open .content-container {
+  margin-left: var(--sidebar-width, 250px);
+}
+
+/* Asegurarnos que el sidebar siempre esté por encima */
+.sidebar {
+  z-index: 50;
+}
+
+/* Estilos de animación para el sidebar */
+.sidebar {
+  transition: width 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  overflow: hidden;
+}
+
+@media (max-width: 640px) {
+  body.sidebar-open .content-container {
+    margin-left: 0;
+    filter: blur(1px);
+    pointer-events: none;
+  }
+  
+  .sidebar {
+    width: 85% !important;
+  }
+}

@@ -1,7 +1,8 @@
 // ProfileBusiness.tsx
 import { useState } from "react";
-import logo from "../assets/C&C logo2.png";
-import { profileTexts } from "../data/profileTexts";
+import logo from "../../assets/C&C logo2.png";
+import { profileTexts } from "../../data/profileTexts";
+import { Link } from "react-router-dom";
 
 export default function ProfileBusiness() {
   const profile = profileTexts["businessProfile"];
@@ -36,7 +37,7 @@ export default function ProfileBusiness() {
   if (!profile) return <p className="text-gray-500">Cargando perfil...</p>;
 
   return (
-    <div className="flex min-h-screen justify-center items-center font-sans">
+    <div className="flex min-h-screen justify-center py-5 items-center font-sans">
       <div className=" max-w-md bg-white p-8 rounded-lg shadow-md flex flex-col items-center font-sans">
         {logo && (
           <img src={logo} alt="Logo" className="h-35 mb-7" />
@@ -102,6 +103,12 @@ export default function ProfileBusiness() {
             Crear Perfil
           </button>
         </form>
+        <p className="text-center text-sm text-gray-600">
+              ¿Tienes cuenta?{' '}
+              <Link to="/api/loginuser" className="text-blue-500 hover:underline">
+                Iniciar Sesion
+              </Link>
+        </p>
       </div>
     </div>
   );

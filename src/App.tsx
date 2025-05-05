@@ -1,17 +1,17 @@
-import './App.css'
-//import {Login} from './pages/Login'
-//import { Register } from './pages/Register'
-//import { Auditory } from './pages/Auditory'
-import { Home } from './pages/Home'
+import './App.css';
+import AppRoutes from './routes/AppRoutes';
+import { AlertProvider } from '../src/components/alert/AlertContext';
 
 function App() {
-
-
   return (
-    <>
-      <Home />
-    </>
-  )
+    <div className="app">
+      <AlertProvider>
+        <main>
+          <AppRoutes />  
+        </main>
+      </AlertProvider>
+    </div>
+  );
 }
 
-export default App
+export default App;

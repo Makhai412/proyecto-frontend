@@ -1,5 +1,7 @@
 import { useState } from "react";
-import logo from '../assets/C&C logo2.png';
+import logo from '../../assets/C&C logo2.png';
+import { Link } from 'react-router-dom';
+
 
 export default function PanelLogin() {
   const [email, setEmail] = useState<string>('');
@@ -18,7 +20,7 @@ export default function PanelLogin() {
 
 
   return (
-    <div className="flex min-h-screen justify-center items-center">
+    <div className="flex min-h-screen justify-center font-sans items-center">
       <div className="w-full max-w-md bg-white p-9 rounded-lg shadow-md flex flex-col items-center font-sans">
         {/* Logo centrado arriba */}
         {logo && (
@@ -67,9 +69,9 @@ export default function PanelLogin() {
 
           <p className="text-center text-sm text-gray-600">
             ¿No tienes cuenta?{' '}
-            <a href="#" className="text-blue-500 hover:underline">
+            <Link to="/api/registerUser" className="text-blue-500 hover:underline">
               Regístrate
-            </a>
+            </Link>
           </p>
         </form>
       </div>
